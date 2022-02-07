@@ -1,2 +1,4 @@
 //this is the viewmodel class
-class StringProvider {}
+import 'package:flutter/material.dart';
+
+class StringProvider extends ChangeNotifier {}
