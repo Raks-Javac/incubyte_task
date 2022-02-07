@@ -13,6 +13,7 @@ class StringCalcMobile extends StatelessWidget {
       //all procider variable adds all provider used to manage state to the multiProvider of type List<Singleton>
       providers: allProviders,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'String Calc',
         theme: ThemeData(
           primarySwatch: Colors.blue,
