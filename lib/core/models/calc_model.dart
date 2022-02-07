@@ -22,12 +22,11 @@ abstract class AbstractStringCalc {
 }
 
 // calculator class implementing the abstract calculator class
-class StringCalc implements AbstractStringCalc {
+class StringCalc  implements AbstractStringCalc {
   @override
   dynamic addNumbers(String numbers) {
-    var calcCondition = {
-      "": 0,
-    };
-    return calcCondition[numbers] ?? "";
+   if(numbers == "" ){
+     
+   }
   }
 }
