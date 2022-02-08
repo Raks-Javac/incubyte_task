@@ -13,8 +13,13 @@ void main() {
 //this checks for an empty string
     test("testing for an empty string", () {
       // assigning an empty string to the add function
-      final emptyStringCheck = stringTestClassObject!.addNumbers("");
-      expect(emptyStringCheck, 0);
+      final _emptyStringCheck = stringTestClassObject!.addNumbers("");
+      expect(_emptyStringCheck, 0);
+    });
+
+    test("test for value inputted greater than 2 and seperated with comma", () {
+      final _valueGreaterThan2 = stringTestClassObject!.addNumbers("8,12");
+      expect(_valueGreaterThan2, 20);
     });
   });
 }
