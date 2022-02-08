@@ -23,6 +23,8 @@ class StringProvider extends ChangeNotifier {
 
 //this is the addUp number string
   void addNumbers() {
+    StringCalcModel().addNumbers(stringObject.numbersInputted);
+
     clearCalcTextField();
   }
 }
