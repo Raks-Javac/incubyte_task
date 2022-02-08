@@ -10,6 +10,7 @@ calc_view_model - runs the class and methods from the model class and displays t
 
 string_calc_view - displays the logic processed in the view-model
 
+calc_unit_test.dart - contains the unit test to each function and instance 
 
 ..this calculator , hanldes comma inputted between strings , delimiters, and throws exception for negative integers
 
