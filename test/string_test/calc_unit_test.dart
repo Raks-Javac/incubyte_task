@@ -21,5 +21,15 @@ void main() {
       final _valueGreaterThan2 = stringTestClassObject!.addNumbers("8,12");
       expect(_valueGreaterThan2, 20);
     });
+
+    test("test to check if the number is an integer", () {
+      final _isVariableInteger = stringTestClassObject!.variableIsInteger("h");
+      expect(_isVariableInteger, false);
+    });
   });
+
+  // test("test for the sum of numbers seperated with a next line", () {
+  //   final _testForNextLineSum = stringTestClassObject!.addNumbers("1\n4");
+  //   expect(_testForNextLineSum, 5);
+  // });
 }
