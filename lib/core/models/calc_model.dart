@@ -22,11 +22,15 @@ abstract class AbstractStringCalc {
 }
 
 // calculator class implementing the abstract calculator class
-class StringCalc  implements AbstractStringCalc {
+class StringCalcModel implements AbstractStringCalc {
   @override
-  dynamic addNumbers(String numbers) {
-   if(numbers == "" ){
-     
-   }
+  dynamic addNumbers(String? numbers) {
+    List<String> numberList2 = numbers!.split(regStringCheckPattern);
+
+    if (numberList2.isEmpty) {
+      return 0;
+    }
   }
 }
+
+var regStringCheckPattern = RegExp(r'x+');

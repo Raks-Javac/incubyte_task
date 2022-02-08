@@ -34,7 +34,7 @@ class StringCalcReusableButton extends StatelessWidget {
                 fontSize: screenAwareSize(22, context)),
       ),
       minWidth: deviceWidth(context) / 1.05,
-      height: height ?? screenAwareSize(82, context),
+      height: height ?? screenAwareSize(70, context),
       color: buttonColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
