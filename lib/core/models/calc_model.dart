@@ -69,7 +69,16 @@ class StringCalcModel implements AbstractStringCalc {
         //and catches the error then displays it in the console
         try {
           valueToInteger = int.parse(element);
+          try {
+            if (valueToInteger.isNegative) {}
+            throw NegativeException('This is my first custom exception');
+          }
+          // ignore: avoid_print
+          on NegativeException {
+            return "negative number is not allowed";
+          }
         } catch (e) {
+          //catches charater passing error for non integer characters
           print(e);
         }
         sum += valueToInteger;
@@ -78,4 +87,10 @@ class StringCalcModel implements AbstractStringCalc {
       return sum;
     }
   }
+}
+
+//this class handles negative exception
+class NegativeException implements Exception {
+  String cause;
+  NegativeException(this.cause);
 }

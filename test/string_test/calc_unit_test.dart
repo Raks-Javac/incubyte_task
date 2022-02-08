@@ -28,8 +28,8 @@ void main() {
     });
   });
 
-  // test("test for the sum of numbers seperated with a next line", () {
-  //   final _testForNextLineSum = stringTestClassObject!.addNumbers("1\n4");
-  //   expect(_testForNextLineSum, 5);
-  // });
+  test("test for negative numbers", () {
+    final _testForNextLineSum = stringTestClassObject!.addNumbers("1,-4");
+    expect(_testForNextLineSum, "negative number is not allowed");
+  });
 }
