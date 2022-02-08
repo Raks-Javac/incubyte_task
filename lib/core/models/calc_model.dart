@@ -41,6 +41,12 @@ class StringCalcModel implements AbstractStringCalc {
       numberList2 = numbers.split("\n");
       return sumList(numberList2);
     }
+    //checking for delimeters
+    if (numbers[1] == RegExp("[^;]+(?=;[^;]*)") ||
+        numbers[0] == RegExp("[^;]+(?=;[^;]*)")) {
+      numberList2 = numbers.split(RegExp("[^;]+(?=;[^;]*)"));
+      return sumList(numberList2);
+    }
 
     if (numberList2.isEmpty) {
       return 0;
@@ -57,6 +63,7 @@ class StringCalcModel implements AbstractStringCalc {
     var sum = 0;
     int valueToInteger = 0;
     if (numberList.length >= 2) {
+      //this loop helps handle any amount of number inputed
       for (var element in numberList) {
         //this try and catch block is to check if the list we are looping through doesnt contain a character we cant perform addition on
         //and catches the error then displays it in the console
@@ -72,5 +79,3 @@ class StringCalcModel implements AbstractStringCalc {
     }
   }
 }
-
-var regStringCheckPattern = RegExp(r'x+');
